@@ -1,0 +1,221 @@
+/*
+Theme Name: Astra Child Theme
+Theme URI: https://wpastra.com/
+Author: Ann-Sofie Solsbæk
+Author URI: https://sostrenegrene.annsofiesolsbaek.dk/
+Description: Child theme based on Astra.
+Version: 1.0.11
+Template: astra
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Lato:wght@400;700&display=swap');
+
+/* ==============================================
+   1. Grundlag: baggrund og brødtekst
+   ============================================== */
+body {
+  background-color: #F7F2E8;   /* lærredshvid */
+  color: #3B2A24;              /* pensel-brun */
+  font-family: 'Lato', sans-serif;
+}
+
+/* ==============================================
+   2. Header: cremet baggrund og tynd linje
+   ============================================== */
+.ast-primary-header-bar,
+.main-header-bar {
+  background-color: #FBF9F4;
+  border-bottom: 1px solid #E6DFD3;
+}
+
+.site-header .site-logo-img img,
+.site-header .custom-logo-link img,
+.site-header .custom-logo {
+  width: 220px !important;
+  max-width: none !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+/* ==============================================
+   3. Menu: versaler med bred spærring
+   ============================================== */
+.main-header-menu .menu-item > .menu-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #3B2A24;
+  padding: 0 16px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+/* ==============================================
+   4. Hover og aktiv side: guldlinje
+   ============================================== */
+.main-header-menu .menu-item:hover > .menu-link,
+.main-header-menu .current-menu-item > .menu-link {
+  color: #3B2A24;
+  border-bottom-color: #C9A45C;   /* gnist-guld */
+}
+
+/* ==============================================
+   5. Søgefelt: ikon og "SØG"
+   ============================================== */
+.site-header .wp-block-search__input {
+  background-color: #F7F5F0;
+  background-image: url('https://sostrenegrene.annsofiesolsbaek.dk/wp-content/uploads/2026/11/sog.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 22px 22px;
+  border: none;
+  border-radius: 0;
+  min-width: 320px;
+  height: 44px;
+  padding: 0 16px 0 56px;
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  color: #3B2A24;
+}
+
+.site-header .wp-block-search__input::placeholder {
+  color: #1E1E1E;
+  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.site-header .wp-block-search__input:focus {
+  outline: 1px solid #C9A45C;  /* gnist-guld ved fokus */
+}
+
+.site-header .wp-block-search__button,
+.site-header .wp-block-search__label {
+  display: none;
+}
+
+/* ==============================================
+   6. Overskrifter i versal-sans
+   ============================================== */
+h1, h2, h3 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #3B2A24;
+}
+
+/* ==============================================
+   7. Knapper med skarpe hjørner
+   ============================================== */
+.wp-block-button__link,
+.ast-button,
+input[type="submit"] {
+  background-color: #3B2A24;
+  color: #F7F2E8;
+  border-radius: 0;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.05em;
+  padding: 14px 28px;
+}
+
+.wp-block-button__link:hover,
+.ast-button:hover,
+input[type="submit"]:hover {
+  background-color: #2E4A3A;   /* skovgrøn */
+  color: #F7F2E8;
+}
+
+/* ==============================================
+   8. Egne ikoner i headeren
+   ============================================== */
+.sg-ikoner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sg-ikoner a {
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;          /* må ikke blive klemt sammen */
+}
+
+.sg-ikoner img {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: none;         /* overskriver Astras max-width: 100% */
+}
+
+.sg-antal {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #3B2A24;
+  color: #F7F2E8;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ast-builder-menu-1 .menu-item.current-menu-item > .menu-link,
+.ast-builder-menu-1 .menu-item:hover > .menu-link {
+  color: #3B2A24 !important;
+}
+
+
+/* ==============================================
+   9. Menu som ren tekst
+   ============================================== */
+.sg-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;        /* alle ord på én linje */
+  gap: 28px;                /* mindre afstand mellem ordene */
+  margin-left: 80px;        /* afstand fra logoet */
+}
+
+.sg-menu span {
+  white-space: nowrap;      /* ordene må aldrig knække */
+  flex-shrink: 0;           /* ordene må ikke klemmes */
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #3B2A24;
+}
+
+/* Fjerner ekstra luft, hvis WordPress har pakket teksten ind i et afsnit */
+.sg-menu p,
+.ast-builder-html-element p:has(.sg-menu) {
+  margin: 0;
+}
+
+/* ==============================================
+   10. Sticky header: navbaren bliver i toppen
+   ============================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;              /* ligger oven på resten af indholdet */
+}
+
+/* Når man er logget ind, skal headeren ligge under WordPress' sorte admin-bjælke */
+.admin-bar .site-header {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  .admin-bar .site-header {
+    top: 46px;               /* admin-bjælken er højere på mobil */
+  }
+}
